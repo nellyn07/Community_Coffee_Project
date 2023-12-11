@@ -86,7 +86,7 @@
                  <div class="row">
                     <div class="col-md-4">
                        <div class="container_main">
-                          <img src="img/gallery_image2.jpg" alt="Avatar" style="width:300px; height:300px;" class="image">
+                          <img src="img/gallery_image2.jpg" alt="Coffee with a Heart" style="width:300px; height:300px;" class="image" onclick="myFunction(this);">
                           <div class="overlay">
                              <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
                           </div>
@@ -94,7 +94,7 @@
                     </div>
                     <div class="col-md-4">
                        <div class="container_main">
-                          <img src="img/gallery_image1.jpg" alt="Avatar" style="width:300px; height:300px;" class="image">
+                          <img src="img/gallery_image1.jpg" alt="Pouring Creamer" style="width:300px; height:300px;" class="image" onclick="myFunction(this);">
                           <div class="overlay">
                              <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
                           </div>
@@ -102,7 +102,7 @@
                     </div>
                     <div class="col-md-4">
                        <div class="container_main">
-                          <img src="img/gallery_image10.jpg" alt="Avatar" style="width:300px; height:300px;" class="image">
+                          <img src="img/gallery_image10.jpg" alt="Roasting Beans" style="width:300px; height:300px;" class="image" onclick="myFunction(this);">
                           <div class="overlay">
                              <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
                           </div>
@@ -114,7 +114,7 @@
                  <div class="row">
                     <div class="col-md-4">
                        <div class="container_main">
-                          <img src="img/gallery_image11.jpg" alt="Avatar" style="width:300px; height:300px;" class="image">
+                          <img src="img/gallery_image11.jpg" alt="Steaming Cup of Coffee" style="width:300px; height:300px;" class="image" onclick="myFunction(this);">
                           <div class="overlay">
                              <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
                           </div>
@@ -122,7 +122,7 @@
                     </div>
                     <div class="col-md-4">
                        <div class="container_main">
-                          <img src="img/gallery_image5.jpg" alt="Avatar" style="width:300px; height:300px;" class="img-5">
+                          <img src="img/gallery_image5.jpg" alt="Latte" style="width:300px; height:300px;" class="img-5" onclick="myFunction(this);">
                           <div class="overlay">
                              <div class="overlay">
                                 <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
@@ -132,7 +132,7 @@
                     </div>
                     <div class="col-md-4">
                        <div class="container_main">
-                          <img src="img/gallery_image6.jpg" alt="Avatar" style="width:300px; height:300px;" class="image">
+                          <img src="img/gallery_image6.jpg" alt="Espresso" style="width:300px; height:300px;" class="image" onclick="myFunction(this);">
                           <div class="overlay">
                              <div class="overlay">
                                 <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
@@ -146,7 +146,7 @@
                  <div class="row">
                     <div class="col-md-4">
                        <div class="container_main">
-                          <img src="img/gallery_image7.jpg" alt="Avatar" style="width:300px; height:300px;" class="image">
+                          <img src="img/gallery_image7.jpg" alt="Wall Art - Coffee" style="width:300px; height:300px;" class="image" onclick="myFunction(this);">
                           <div class="overlay">
                              <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
                           </div>
@@ -154,7 +154,7 @@
                     </div>
                     <div class="col-md-4">
                        <div class="container_main">
-                          <img src="img/gallery_image8.jpg" alt="Avatar" style="width:300px; height:300px;" class="image">
+                          <img src="img/gallery_image8.jpg" alt="Coffee Beans" style="width:300px; height:300px;" class="image" onclick="myFunction(this);">
                           <div class="overlay">
                              <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
                           </div>
@@ -162,7 +162,7 @@
                     </div>
                     <div class="col-md-4">
                        <div class="container_main">
-                          <img src="img/gallery_image3.jpg" alt="Avatar" style="width:300px; height:300px;" class="image">
+                          <img src="img/gallery_image3.jpg" alt="Dripping Coffee" style="width:300px; height:300px;" class="image" onclick="myFunction(this);">
                           <div class="overlay">
                              <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
                           </div>
@@ -175,7 +175,21 @@
         </div>
      </div>
      <!-- gallery section end -->
-
+     <div class="container">
+      <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+      <img id="expandedImg" style="width:75%">
+      <div id="imgtext"></div>
+    </div>
+    
+    <script>
+    function myFunction(imgs) {
+      var expandImg = document.getElementById("expandedImg");
+      var imgText = document.getElementById("imgtext");
+      expandImg.src = imgs.src;
+      imgText.innerHTML = imgs.alt;
+      expandImg.parentElement.style.display = "block";
+    }
+    </script>
 
     <!-- Footer Start -->
     <div class="container-fluid footer text-white mt-5 pt-5 px-0 position-relative overlay-top">
